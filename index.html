@@ -1,152 +1,162 @@
-label: {
-              normal: {
-                position: "inner"
-              }
-            },
-¿ÉÒÔ°É±ıÍ¼ÍâÃæµÄ×Ö·Åµ½±ıÍ¼ÀïÃæ
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    label: {
+      normal: {
+        position: "inner"
+      }
+    },
+å¯ä»¥å§é¥¼å›¾å¤–é¢çš„å­—æ”¾åˆ°é¥¼å›¾é‡Œé¢
 
-Ç°¶Ë´¦Àíºó¶ËÎÄ¼şÁ÷²¢ÏÂÔØµÄ¼¸ÖÖ·½·¨ https://blog.csdn.net/weixin_42292748/article/details/85060227
+å‰ç«¯å¤„ç†åç«¯æ–‡ä»¶æµå¹¶ä¸‹è½½çš„å‡ ç§æ–¹æ³• https://blog.csdn.net/weixin_42292748/article/details/85060227
 
 https://unpkg.com/
 
-@click="handleClick(scope.$index)"µÄÓÃ·¨£º
+@click="handleClick(scope.$index)"çš„ç”¨æ³•ï¼š
 handleClick(a, b) {
-      console.log(a);
-      this.num = a;
+console.log(a);
+this.num = a;
 }
 
-axiosµÄÁíÒ»ÖÖÓÃ·¨£ºsend() { //·¢ËÍ
-      var aa = this.value
-      console.log(aa)
-      var bb = this.input1		https://gwl201349019.github.io/_Blog/note/vue/vueji-chu-bi-ji.html#%E6%8C%87%E4%BB%A4    ÃæÊÔÌâÍøÖ·
-      console.log(bb)
-      var uuid = this.input4
-      // console.log(cc)
-      var a = this.input6
-      // console.log(dd)                       git checkout -b backvue ´´½¨²¢ÇĞ»»·ÖÖ§  git push origin backvue -f  °Ñ±¾µØÏîÄ¿pushµ½Ô¶¶Ë²¢¸²¸Ç
-      var b = this.input8
-      // console.log(ee)                       git update-index --assume-unchanged  
-      axios({
-        url:bb,                                git stash pop stash@{0}  ·Å³öÔİ´æ  git stash Ôİ´æ
-        method:aa,
-        params:{
-          uuid:this.input5,
-          a:this.input7,
-          b:this.input9,
-        }
-      }).then((response)=>{
-        console.log(response.data)
-        this.text = response.data
-        this.text1 = response.data.data
-      })
-    },
+axiosçš„å¦ä¸€ç§ç”¨æ³•ï¼šsend() { //å‘é€
+var aa = this.value
+console.log(aa)
+var bb = this.input1		https://gwl201349019.github.io/_Blog/note/vue/vueji-chu-bi-ji.html#%E6%8C%87%E4%BB%A4    é¢è¯•é¢˜ç½‘å€
+console.log(bb)
+var uuid = this.input4
+// console.log(cc)
+var a = this.input6
+// console.log(dd)                       git checkout -b backvue åˆ›å»ºå¹¶åˆ‡æ¢åˆ†æ”¯  git push origin backvue -f  æŠŠæœ¬åœ°é¡¹ç›®pushåˆ°è¿œç«¯å¹¶è¦†ç›–
+var b = this.input8
+// console.log(ee)                       git update-index --assume-unchanged  
+axios({
+url:bb,                                git stash pop stash@{0}  æ”¾å‡ºæš‚å­˜  git stash æš‚å­˜
+method:aa,
+params:{
+  uuid:this.input5,
+  a:this.input7,
+  b:this.input9,
+}
+}).then((response)=>{
+console.log(response.data)
+this.text = response.data
+this.text1 = response.data.data
+})
+},
 
-axios postÌá½»application/x-www-form-urlencodedµÄ¸ñÊ½´úÂë£º
+axios postæäº¤application/x-www-form-urlencodedçš„æ ¼å¼ä»£ç ï¼š
 const data = { uuid: this.input5, a: this.input7, b: this.input9 };
-        axios({
-          url: bb,
-          method: aa,
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          data: qs.stringify(data)
-        }).then
+axios({
+  url: bb,
+  method: aa,
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  data: qs.stringify(data)
+}).then
 
 
-´ò°üÅöµ½ÎÊÌâÖ±½Ó¸ÄconfigÏÂÃæµÄindex.jsÀïµÄµÚÊ®ĞĞ¸Ä³ÉÕâÑùassetsPublicPath: './'È»ºóÖØĞÂ´ò°ü¾Í¿ÉÒÔÁË£¬(ÔÚ´ò°üºÃµÄÎÄ¼şÀïÆğ·şÎñ£¬
-·şÎñÃüÁîÊÇnpm install http-server -g×ßÍêÔÙhttp-server¾Í¿ÉÒÔÁË¡£)»òÕß²»ÓÃ°´À¨ºÅÀïµÄÀ´ Ö±½Ó´ò¿ªindex.html¾Í¿ÉÒÔ¡£
+æ‰“åŒ…ç¢°åˆ°é—®é¢˜ç›´æ¥æ”¹configä¸‹é¢çš„index.jsé‡Œçš„ç¬¬åè¡Œæ”¹æˆè¿™æ ·assetsPublicPath: './'ç„¶åé‡æ–°æ‰“åŒ…å°±å¯ä»¥äº†ï¼Œ(åœ¨æ‰“åŒ…å¥½çš„æ–‡ä»¶é‡Œèµ·æœåŠ¡ï¼Œ
+æœåŠ¡å‘½ä»¤æ˜¯npm install http-server -gèµ°å®Œå†http-serverå°±å¯ä»¥äº†ã€‚)æˆ–è€…ä¸ç”¨æŒ‰æ‹¬å·é‡Œçš„æ¥ ç›´æ¥æ‰“å¼€index.htmlå°±å¯ä»¥ã€‚
 
-´ò°üÖ®ºó³öÏÖÍ¼Æ¬ÏÔÊ¾Ğ¡·½¿é¿ÉÒÔÔÚbuildÏÂÃæµÄutilsÀïÃæµÄgenerateLoadersº¯ÊıÀïÌí¼ÓpublicPath:'../../',
+æ‰“åŒ…ä¹‹åå‡ºç°å›¾ç‰‡æ˜¾ç¤ºå°æ–¹å—å¯ä»¥åœ¨buildä¸‹é¢çš„utilsé‡Œé¢çš„generateLoaderså‡½æ•°é‡Œæ·»åŠ publicPath:'../../',
 
-´ò°üÖ®ºóĞèÒªÆğ¸ö·şÎñ²ÅÄÜÔÚ±¾µØ´ò¿ª  npm i -g serve  Æô¶¯ÃüÁî serve -s dist/ (distÊÇÄã´ò°üÖ®ºóµÄÎÄ¼şÃû)
+æ‰“åŒ…ä¹‹åéœ€è¦èµ·ä¸ªæœåŠ¡æ‰èƒ½åœ¨æœ¬åœ°æ‰“å¼€  npm i -g serve  å¯åŠ¨å‘½ä»¤ serve -s dist/ (distæ˜¯ä½ æ‰“åŒ…ä¹‹åçš„æ–‡ä»¶å)
 
-https://www.jianshu.com/p/4b5a06f0738d   vueÏîÄ¿Ã»ÓĞconfigÎÄ¼ş¼ĞµÄ»°½â¾ö´ò°üºó¿Õ°×Ò³µÄ·½·¨
+https://www.jianshu.com/p/4b5a06f0738d   vueé¡¹ç›®æ²¡æœ‰configæ–‡ä»¶å¤¹çš„è¯è§£å†³æ‰“åŒ…åç©ºç™½é¡µçš„æ–¹æ³•
 
-ÏÂÔØÎÄ¼şµÄµØÖ·getÇëÇó£ºhttps://www.jb51.net/article/170791.htm
+ä¸‹è½½æ–‡ä»¶çš„åœ°å€getè¯·æ±‚ï¼šhttps://www.jb51.net/article/170791.htm
 
-display:inline-block;»áµ¼ÖÂÁ½¸ö²¢ÅÅµÄÔªËØ¶Ô²»Æë  ¿ÉÒÔÓÃvertical-align:top;½â¾ö
+display:inline-block;ä¼šå¯¼è‡´ä¸¤ä¸ªå¹¶æ’çš„å…ƒç´ å¯¹ä¸é½  å¯ä»¥ç”¨vertical-align:top;è§£å†³
 
-https://gallery.echartsjs.com/editor.html?c=xr1IEt3r4Q  ¿ÉÒÔÏÂÔØÈ«¹ú¸÷µØµØÍ¼µÄjsonÎÄ¼ş
+https://gallery.echartsjs.com/editor.html?c=xr1IEt3r4Q  å¯ä»¥ä¸‹è½½å…¨å›½å„åœ°åœ°å›¾çš„jsonæ–‡ä»¶
 
-https://hxkj.vip/demo/echartsMap/  Õâ¸öÒ²¿ÉÒÔÏÂÔØÈ«¹úµØÍ¼»¹²»¿¨
+https://hxkj.vip/demo/echartsMap/  è¿™ä¸ªä¹Ÿå¯ä»¥ä¸‹è½½å…¨å›½åœ°å›¾è¿˜ä¸å¡
 
-https://www.cnblogs.com/yinn/p/9056731.html   vueÇ¿ÖÆË¢ĞÂÒ³ÃæµÄ·½·¨
+https://www.cnblogs.com/yinn/p/9056731.html   vueå¼ºåˆ¶åˆ·æ–°é¡µé¢çš„æ–¹æ³•
 
-https://blog.csdn.net/jiaqingge/article/details/80333347     $setµÄÓÃ·¨¸Ä±äÊı×éµÄ   ÏÂÃæÄÇ¸ö¸üºÃ
+https://blog.csdn.net/jiaqingge/article/details/80333347     $setçš„ç”¨æ³•æ”¹å˜æ•°ç»„çš„   ä¸‹é¢é‚£ä¸ªæ›´å¥½
 
-$setµÄÓÃ·¨¸Ä±äÊı×éµÄ     https://blog.csdn.net/weixin_41801013/article/details/105681829?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+$setçš„ç”¨æ³•æ”¹å˜æ•°ç»„çš„     https://blog.csdn.net/weixin_41801013/article/details/105681829?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
 
-https://blog.csdn.net/gyq04551/article/details/80318596      js½ØÈ¡Ä³¸ö×Ö¶ÎºóÃæµÄ×Ö·û´®·½·¨  
+https://blog.csdn.net/gyq04551/article/details/80318596      jsæˆªå–æŸä¸ªå­—æ®µåé¢çš„å­—ç¬¦ä¸²æ–¹æ³•  
 
-https://www.cnblogs.com/wenbinjiang/p/11062959.html          npm i ÏÂÔØ¿¨×Å²»¶¯µÄ½â¾ö°ì·¨
+https://www.cnblogs.com/wenbinjiang/p/11062959.html          npm i ä¸‹è½½å¡ç€ä¸åŠ¨çš„è§£å†³åŠæ³•
 
-https://blog.csdn.net/qq_32610671/article/details/103196278  VUE½«tableÊı¾İµ¼³öexcel
+https://blog.csdn.net/qq_32610671/article/details/103196278  VUEå°†tableæ•°æ®å¯¼å‡ºexcel
 
-https://www.cnblogs.com/xiuxiume/p/11978030.html             vueÖĞ×Ô¶¯½«px×ª»»³Érem
+https://www.cnblogs.com/xiuxiume/p/11978030.html             vueä¸­è‡ªåŠ¨å°†pxè½¬æ¢æˆrem
 
-https://www.sassmeister.com/              sass less ×ª»»Æ÷
+https://www.sassmeister.com/              sass less è½¬æ¢å™¨
 
-https://segmentfault.com/q/1010000016894261 vueÏîÄ¿´úÂëĞĞÌ«¶àµÄ»°½øĞĞµÄÓÅ»¯
+https://segmentfault.com/q/1010000016894261 vueé¡¹ç›®ä»£ç è¡Œå¤ªå¤šçš„è¯è¿›è¡Œçš„ä¼˜åŒ–
 
-https://www.kancloud.cn/yunye/axios/234846 axiosÖĞÎÄËµÃ÷
+https://www.kancloud.cn/yunye/axios/234846 axiosä¸­æ–‡è¯´æ˜
 
-https://www.cnblogs.com/langhaoabcd/p/11346227.html element¶¯Ì¬Â·ÓÉ
+https://www.cnblogs.com/langhaoabcd/p/11346227.html elementåŠ¨æ€è·¯ç”±
 
-http://cn.mikecrm.com/67Ohi0u ÈıÌå
+http://cn.mikecrm.com/67Ohi0u ä¸‰ä½“
 
-https://www.jb51.net/article/167287.htm ÕıÔò±í´ïÊ½
+https://www.jb51.net/article/167287.htm æ­£åˆ™è¡¨è¾¾å¼
 
-https://www.cnblogs.com/w821759016/p/13032468.html ¶¯Ì¬Â·ÓÉ
+https://www.cnblogs.com/w821759016/p/13032468.html åŠ¨æ€è·¯ç”±
 
-https://segmentfault.com/a/1190000020343163?utm_source=tag-newest     vueÑéÖ¤Á½´ÎÃÜÂëÊÇ·ñÏàÍ¬
+https://segmentfault.com/a/1190000020343163?utm_source=tag-newest     vueéªŒè¯ä¸¤æ¬¡å¯†ç æ˜¯å¦ç›¸åŒ
 
-https://blog.csdn.net/sleepwalker_1992/article/details/82818970       elementÒıÈëµÚÈı·½Í¼±ê¿âµÄ·½·¨
+https://blog.csdn.net/sleepwalker_1992/article/details/82818970       elementå¼•å…¥ç¬¬ä¸‰æ–¹å›¾æ ‡åº“çš„æ–¹æ³•
 
-https://blog.csdn.net/weixin_42215897/article/details/92812414       vue md5¼ÓÃÜ
+https://blog.csdn.net/weixin_42215897/article/details/92812414       vue md5åŠ å¯†
 
-https://blog.csdn.net/qq_17451827/article/details/84026100        htmlÒ³ÃæÒ»Ö±¶¶¶¯£¬»Î¶¯µÄ½â¾ö°ì·¨
+https://blog.csdn.net/qq_17451827/article/details/84026100        htmlé¡µé¢ä¸€ç›´æŠ–åŠ¨ï¼Œæ™ƒåŠ¨çš„è§£å†³åŠæ³•
 
-react°²×°bable²½Öè            https://blog.csdn.net/whuhewei/article/details/105538205?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+reactå®‰è£…bableæ­¥éª¤            https://blog.csdn.net/whuhewei/article/details/105538205?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
 
-https://blog.csdn.net/weixin_43549408/article/details/85329311        Vue+Element ui ¸ù¾İºóÌ¨·µ»ØÊı¾İÉèÖÃ¶¯Ì¬±íÍ·
+https://blog.csdn.net/weixin_43549408/article/details/85329311        Vue+Element ui æ ¹æ®åå°è¿”å›æ•°æ®è®¾ç½®åŠ¨æ€è¡¨å¤´
 
-https://blog.csdn.net/w_gold_qin/article/details/105579283    vue¶¯Ì¬Ôö¼ÓÊı×Öµ½Ö¸¶¨Êı×Ö
+https://blog.csdn.net/w_gold_qin/article/details/105579283    vueåŠ¨æ€å¢åŠ æ•°å­—åˆ°æŒ‡å®šæ•°å­—
 
-https://www.freesion.com/article/716825877/         elementÉÏ´«µÄÊ±ºòÖªµÀ´óĞ¡µÄ·½·¨
+https://www.freesion.com/article/716825877/         elementä¸Šä¼ çš„æ—¶å€™çŸ¥é“å¤§å°çš„æ–¹æ³•
 
-https://www.cnblogs.com/xiandairen/p/7339705.html          È¥ÖØÊı×éÀïÃæµÄ¶ÔÏó
+https://www.cnblogs.com/xiandairen/p/7339705.html          å»é‡æ•°ç»„é‡Œé¢çš„å¯¹è±¡
 
-vueĞ¶ÔØ²å¼şµÄ·½·¨    https://blog.csdn.net/u012201879/article/details/103334733?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param
+vueå¸è½½æ’ä»¶çš„æ–¹æ³•    https://blog.csdn.net/u012201879/article/details/103334733?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param
 
-https://www.jianshu.com/p/26d050497abb     gitºÏ²¢·ÖÖ§
+https://www.jianshu.com/p/26d050497abb     gitåˆå¹¶åˆ†æ”¯
 
-https://mrhj.gitee.io/form-generator/#/    ¿ÉÒÔÉú²úÒ³ÃæµÄelement×é¼ş
+https://mrhj.gitee.io/form-generator/#/    å¯ä»¥ç”Ÿäº§é¡µé¢çš„elementç»„ä»¶
 
-https://www.jianshu.com/p/a6a0b1079c73     websocketÀı×Ó
+https://www.jianshu.com/p/a6a0b1079c73     websocketä¾‹å­
 
-ÏÂÔØÎÄ¼şpost¸úget¶¼¿ÉÒÔ ¾Í¿´ÇëÇó´¦ÀíÄÇ¿é¾ÍĞĞ   https://blog.csdn.net/u010598111/article/details/85052865?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242
+ä¸‹è½½æ–‡ä»¶postè·Ÿgetéƒ½å¯ä»¥ å°±çœ‹è¯·æ±‚å¤„ç†é‚£å—å°±è¡Œ   https://blog.csdn.net/u010598111/article/details/85052865?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242
 
-https://blog.csdn.net/weixin_45613604/article/details/108804582   js°ÑÊı×éÀïÃæµÄËùÓĞ¶ÔÏóºÏ²¢³ÉÒ»¸ö¶ÔÏó
+https://blog.csdn.net/weixin_45613604/article/details/108804582   jsæŠŠæ•°ç»„é‡Œé¢çš„æ‰€æœ‰å¯¹è±¡åˆå¹¶æˆä¸€ä¸ªå¯¹è±¡
 
-Êı×é±ä³É¶ÔÏóµÄ·½·¨   let obj = {...arr}  objÊÇ¶ÔÏó  arrÊÇÊı×é
+æ•°ç»„å˜æˆå¯¹è±¡çš„æ–¹æ³•   let obj = {...arr}  objæ˜¯å¯¹è±¡  arræ˜¯æ•°ç»„
 
-https://www.cnblogs.com/mmzuo-798/p/10397017.html    echartsÖ®legend-¸Ä±äÍ¼ÀıµÄÍ¼±êÎª×Ô¶¨ÒåÍ¼Æ¬
+https://www.cnblogs.com/mmzuo-798/p/10397017.html    echartsä¹‹legend-æ”¹å˜å›¾ä¾‹çš„å›¾æ ‡ä¸ºè‡ªå®šä¹‰å›¾ç‰‡
 
-https://www.cnblogs.com/nongzihong/p/10288049.html   ¸¸´«×ÓÊµÀı
+https://www.cnblogs.com/nongzihong/p/10288049.html   çˆ¶ä¼ å­å®ä¾‹
 
-https://www.jianshu.com/p/a2266bd20f01    element±íµ¥¶¯Ì¬Ğ£Ñé
+https://www.jianshu.com/p/a2266bd20f01    elementè¡¨å•åŠ¨æ€æ ¡éªŒ
 
-https://www.cnblogs.com/TreeCTJ/p/11906178.html     vue + element ÎÄ¼şÉÏ´« ²¢½«ÎÄ¼ş×ª base64
+https://www.cnblogs.com/TreeCTJ/p/11906178.html     vue + element æ–‡ä»¶ä¸Šä¼  å¹¶å°†æ–‡ä»¶è½¬ base64
 
-https://blog.csdn.net/anranfengge123/article/details/105746577/    Ê¹ÓÃkonvaºÍvue-konvaÍê³ÉÇ°¶ËÍÏ×§»¬¿éÑéÖ¤¹¦ÄÜ
+https://blog.csdn.net/anranfengge123/article/details/105746577/    ä½¿ç”¨konvaå’Œvue-konvaå®Œæˆå‰ç«¯æ‹–æ‹½æ»‘å—éªŒè¯åŠŸèƒ½
 
-https://blog.csdn.net/hahabboom/article/details/105117151    echartsÏÂ×êÒÔºóµØÍ¼Î»ÖÃ²»¾ÓÖĞµÄ½â¾ö°ì·¨
+https://blog.csdn.net/hahabboom/article/details/105117151    echartsä¸‹é’»ä»¥ååœ°å›¾ä½ç½®ä¸å±…ä¸­çš„è§£å†³åŠæ³•
 
-https://www.jianshu.com/p/a2a7d3a9cf2b        vue »ùÓÚvue-seamless-scrollÎŞ·ì¹ö¶¯
+https://www.jianshu.com/p/a2a7d3a9cf2b        vue åŸºäºvue-seamless-scrollæ— ç¼æ»šåŠ¨
 
-https://blog.csdn.net/lavendersue/article/details/105838344         Driver.js-·Ö²½Ö¸Òı²å¼ş £¨¿ÉÒÔ¸ú¼¯³ÉµÄÏîÄ¿Ò»Æğ½áºÏ¿´£©
+https://blog.csdn.net/lavendersue/article/details/105838344         Driver.js-åˆ†æ­¥æŒ‡å¼•æ’ä»¶ ï¼ˆå¯ä»¥è·Ÿé›†æˆçš„é¡¹ç›®ä¸€èµ·ç»“åˆçœ‹ï¼‰
 
-https://www.cnblogs.com/chriscen/p/13253559.html             element-uiÖĞtable±í¸ñ±íÍ·ºÍ±í¸ñÄÚÈİ¶¼Ë®Æ½¾ÓÖĞ
+https://www.cnblogs.com/chriscen/p/13253559.html             element-uiä¸­tableè¡¨æ ¼è¡¨å¤´å’Œè¡¨æ ¼å†…å®¹éƒ½æ°´å¹³å±…ä¸­
 
-https://blog.csdn.net/gebieren/article/details/108977681              el-treeµÄÀÁ¼ÓÔØÊı¾İ³ıÈ¥Ã»ÓĞÓÃµ½µÄÈı½ÇĞÎÍ¼±ê»ò×îºóÒ»¼¶Èı½ÇĞÎ£©
+https://blog.csdn.net/gebieren/article/details/108977681              el-treeçš„æ‡’åŠ è½½æ•°æ®é™¤å»æ²¡æœ‰ç”¨åˆ°çš„ä¸‰è§’å½¢å›¾æ ‡æˆ–æœ€åä¸€çº§ä¸‰è§’å½¢ï¼‰
 
 
 
@@ -176,3 +186,7 @@ https://blog.csdn.net/gebieren/article/details/108977681              el-treeµÄÀ
 
 
 
+
+  </div>
+</body>
+</html>
