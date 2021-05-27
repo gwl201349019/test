@@ -1,0 +1,178 @@
+label: {
+              normal: {
+                position: "inner"
+              }
+            },
+可以吧饼图外面的字放到饼图里面
+
+前端处理后端文件流并下载的几种方法 https://blog.csdn.net/weixin_42292748/article/details/85060227
+
+https://unpkg.com/
+
+@click="handleClick(scope.$index)"的用法：
+handleClick(a, b) {
+      console.log(a);
+      this.num = a;
+}
+
+axios的另一种用法：send() { //发送
+      var aa = this.value
+      console.log(aa)
+      var bb = this.input1		https://gwl201349019.github.io/_Blog/note/vue/vueji-chu-bi-ji.html#%E6%8C%87%E4%BB%A4    面试题网址
+      console.log(bb)
+      var uuid = this.input4
+      // console.log(cc)
+      var a = this.input6
+      // console.log(dd)                       git checkout -b backvue 创建并切换分支  git push origin backvue -f  把本地项目push到远端并覆盖
+      var b = this.input8
+      // console.log(ee)                       git update-index --assume-unchanged  
+      axios({
+        url:bb,                                git stash pop stash@{0}  放出暂存  git stash 暂存
+        method:aa,
+        params:{
+          uuid:this.input5,
+          a:this.input7,
+          b:this.input9,
+        }
+      }).then((response)=>{
+        console.log(response.data)
+        this.text = response.data
+        this.text1 = response.data.data
+      })
+    },
+
+axios post提交application/x-www-form-urlencoded的格式代码：
+const data = { uuid: this.input5, a: this.input7, b: this.input9 };
+        axios({
+          url: bb,
+          method: aa,
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          data: qs.stringify(data)
+        }).then
+
+
+打包碰到问题直接改config下面的index.js里的第十行改成这样assetsPublicPath: './'然后重新打包就可以了，(在打包好的文件里起服务，
+服务命令是npm install http-server -g走完再http-server就可以了。)或者不用按括号里的来 直接打开index.html就可以。
+
+打包之后出现图片显示小方块可以在build下面的utils里面的generateLoaders函数里添加publicPath:'../../',
+
+打包之后需要起个服务才能在本地打开  npm i -g serve  启动命令 serve -s dist/ (dist是你打包之后的文件名)
+
+https://www.jianshu.com/p/4b5a06f0738d   vue项目没有config文件夹的话解决打包后空白页的方法
+
+下载文件的地址get请求：https://www.jb51.net/article/170791.htm
+
+display:inline-block;会导致两个并排的元素对不齐  可以用vertical-align:top;解决
+
+https://gallery.echartsjs.com/editor.html?c=xr1IEt3r4Q  可以下载全国各地地图的json文件
+
+https://hxkj.vip/demo/echartsMap/  这个也可以下载全国地图还不卡
+
+https://www.cnblogs.com/yinn/p/9056731.html   vue强制刷新页面的方法
+
+https://blog.csdn.net/jiaqingge/article/details/80333347     $set的用法改变数组的   下面那个更好
+
+$set的用法改变数组的     https://blog.csdn.net/weixin_41801013/article/details/105681829?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+
+https://blog.csdn.net/gyq04551/article/details/80318596      js截取某个字段后面的字符串方法  
+
+https://www.cnblogs.com/wenbinjiang/p/11062959.html          npm i 下载卡着不动的解决办法
+
+https://blog.csdn.net/qq_32610671/article/details/103196278  VUE将table数据导出excel
+
+https://www.cnblogs.com/xiuxiume/p/11978030.html             vue中自动将px转换成rem
+
+https://www.sassmeister.com/              sass less 转换器
+
+https://segmentfault.com/q/1010000016894261 vue项目代码行太多的话进行的优化
+
+https://www.kancloud.cn/yunye/axios/234846 axios中文说明
+
+https://www.cnblogs.com/langhaoabcd/p/11346227.html element动态路由
+
+http://cn.mikecrm.com/67Ohi0u 三体
+
+https://www.jb51.net/article/167287.htm 正则表达式
+
+https://www.cnblogs.com/w821759016/p/13032468.html 动态路由
+
+https://segmentfault.com/a/1190000020343163?utm_source=tag-newest     vue验证两次密码是否相同
+
+https://blog.csdn.net/sleepwalker_1992/article/details/82818970       element引入第三方图标库的方法
+
+https://blog.csdn.net/weixin_42215897/article/details/92812414       vue md5加密
+
+https://blog.csdn.net/qq_17451827/article/details/84026100        html页面一直抖动，晃动的解决办法
+
+react安装bable步骤            https://blog.csdn.net/whuhewei/article/details/105538205?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+
+https://blog.csdn.net/weixin_43549408/article/details/85329311        Vue+Element ui 根据后台返回数据设置动态表头
+
+https://blog.csdn.net/w_gold_qin/article/details/105579283    vue动态增加数字到指定数字
+
+https://www.freesion.com/article/716825877/         element上传的时候知道大小的方法
+
+https://www.cnblogs.com/xiandairen/p/7339705.html          去重数组里面的对象
+
+vue卸载插件的方法    https://blog.csdn.net/u012201879/article/details/103334733?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param
+
+https://www.jianshu.com/p/26d050497abb     git合并分支
+
+https://mrhj.gitee.io/form-generator/#/    可以生产页面的element组件
+
+https://www.jianshu.com/p/a6a0b1079c73     websocket例子
+
+下载文件post跟get都可以 就看请求处理那块就行   https://blog.csdn.net/u010598111/article/details/85052865?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242
+
+https://blog.csdn.net/weixin_45613604/article/details/108804582   js把数组里面的所有对象合并成一个对象
+
+数组变成对象的方法   let obj = {...arr}  obj是对象  arr是数组
+
+https://www.cnblogs.com/mmzuo-798/p/10397017.html    echarts之legend-改变图例的图标为自定义图片
+
+https://www.cnblogs.com/nongzihong/p/10288049.html   父传子实例
+
+https://www.jianshu.com/p/a2266bd20f01    element表单动态校验
+
+https://www.cnblogs.com/TreeCTJ/p/11906178.html     vue + element 文件上传 并将文件转 base64
+
+https://blog.csdn.net/anranfengge123/article/details/105746577/    使用konva和vue-konva完成前端拖拽滑块验证功能
+
+https://blog.csdn.net/hahabboom/article/details/105117151    echarts下钻以后地图位置不居中的解决办法
+
+https://www.jianshu.com/p/a2a7d3a9cf2b        vue 基于vue-seamless-scroll无缝滚动
+
+https://blog.csdn.net/lavendersue/article/details/105838344         Driver.js-分步指引插件 （可以跟集成的项目一起结合看）
+
+https://www.cnblogs.com/chriscen/p/13253559.html             element-ui中table表格表头和表格内容都水平居中
+
+https://blog.csdn.net/gebieren/article/details/108977681              el-tree的懒加载数据除去没有用到的三角形图标或最后一级三角形）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
